@@ -6,6 +6,7 @@ const Box = (props) => {
    result = props.result === "Win"?"Lose":"Win";
  }else {
    result = props.result;
+  
  }
   return (
     <div className={`box ${result}`}>

@@ -20,6 +20,11 @@
 h1{
   margin: 5px;
 }
+p{
+  text-align: center;
+  color: #ff0000;
+ 
+}
 
 .item-img{
   width: 200px;

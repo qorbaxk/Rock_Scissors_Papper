@@ -49,6 +49,7 @@ function App() {
   const [computerSelect, setComputerSelect] = useState(null);
   const [result, setResult] = useState("");
 
+
   //유저가 버튼 선택시 실행되는 게임시작 함수
   const gameOn = (userChoice) => {
     setUserSelect(choice1[userChoice]);
@@ -58,6 +59,7 @@ function App() {
     //판단하는 함수 유저값과 컴퓨터값을 같이 넘겨줌
     setResult(judgement(choice1[userChoice],computerChoice));
     
+  
   };
 
   //유저입장에서 승패 판단하는 함수
@@ -74,6 +76,8 @@ function App() {
     }else if(us == "Paper"){
       return cs=="Rock"?"Win":"Lose"
     }
+
+    
   }
 
   //컴퓨터가 랜덤하게 값을 뽑는 함수
@@ -88,12 +92,15 @@ function App() {
     return choice2[final];
   }
 
+
   return (
+    
     <div>
       <div className="explain">
         Hi! Spider-Man! <br></br>
         you have to beat Deadpool!
       </div>
+    
       <div className="main">
         <Box title="Spiderman" basic="img/spiderman.png" item={userSelect} result={result}/>
         <h1><br></br><br></br><br></br><br></br>vs</h1>
@@ -112,6 +119,11 @@ function App() {
       </div>
     </div>
   );
+
+    
+  
 }
+
+
 
 export default App;
